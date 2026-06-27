@@ -14,3 +14,16 @@ dependencies = [
     "torchvision",
     "wilds"
 ]
+
+# Use the CUDA 13.0 build of PyTorch (GPU support) instead of the default CPU-only
+# wheels from PyPI. cu130 is compatible with the NVIDIA driver (CUDA 13.1) on this
+# machine. If you run on a machine without an NVIDIA GPU, point these to the cpu index
+# (https://download.pytorch.org/whl/cpu) or remove this section.
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
