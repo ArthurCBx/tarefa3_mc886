@@ -1,0 +1,16 @@
+[project]
+name = "tarefa-3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel",
+    "scikit-learn",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "torch",
+    "torchvision",
+    "wilds"
+]
